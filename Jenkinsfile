@@ -10,7 +10,7 @@ pipeline {
                 }
             }
             steps {
-                sh ```
+                sh '''
                     ls -la
                     node --version
                     npm --version
@@ -18,7 +18,7 @@ pipeline {
                     npm run build
                     ls -la
 
-                ```
+                '''
             
             }
         }
