@@ -26,8 +26,10 @@ pipeline {
         }
         stage('TEST') {
             steps {
+                sh '''
                 echo "Test stage"
                 test -f ./build/index.html && echo "File exists" || echo "File not found"
+                '''
             }
         }
     }
